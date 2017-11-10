@@ -6,19 +6,43 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
-    class Rectangle
+    class Box
     {
-        internal double length;
-        internal double width;
+        private double length;
+        private double width;
+        private double height;
 
-        double GetArea()
+        public double getVolume()
         {
-            return length * width;
+            return length * width * height;
         }
 
-        public void Display()
+        public void setLength(double len)
         {
-            Console.WriteLine();
+            length = len;
+        }
+
+        public void setWidth(double wid)
+        {
+            width = wid;
+        }
+
+        public void setHeight(double hei)
+        {
+            height = hei;
+        }
+
+        public static Box operator+()
+    }
+
+
+
+
+    class test
+    {
+        static void Main(string[] args)
+        {
+
         }
     }
 }
